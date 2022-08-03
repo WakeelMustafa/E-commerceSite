@@ -12,20 +12,21 @@ import {
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Header name={"Wakeel Store"} />
-        <Routes>
-          <Route exact path="/" element={<Home />}>
 
-          </Route>
-          <Route exact path="/cart" element={<Cart />}>
+        <Router>
+          <Header name={"Wakeel Store"} />
+          <Routes>
+            <Route exact path="/" element={<Home />}>
 
-          </Route>
-        </Routes>
+            </Route>
+            <Route exact path="/cart" element={<Cart />}>
+
+            </Route>
+          </Routes>
 
 
 
-      </Router>
+        </Router>
     </div>
   );
 }

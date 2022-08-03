@@ -1,9 +1,10 @@
 import React from 'react'
+import { useSelector } from 'react-redux';
 import {
     Link
 } from "react-router-dom";
-
 export const Header = (props) => {
+    const cartValue = useSelector((state) => state.cart.length)
     return (
         <>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -20,11 +21,15 @@ export const Header = (props) => {
                         <li className="nav-item">
                             <Link className="nav-link" to="/cart">Cart</Link>
                         </li>
-                        <span className="left"><b>Cart Item: 0</b></span>
+                        <span className="left" style={{ color: "red" }}><b>Cart Item: {cartValue}</b></span>
                     </ul>
 
                 </div>
             </nav>
+            <div className="hwrap"><div className="hmove">
+                <div className="hitem">50% OFF For first 10 Customers</div>
+                <div className="hitem">50% off</div>
+            </div></div>
 
 
         </>
